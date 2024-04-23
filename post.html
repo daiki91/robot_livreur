@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOWWFOOD Blog Template</title>
+    <meta name="author" content="Daiki">
+    <meta name="description" content="">
+
+    <!-- Tailwind David Grzyb -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+        .font-family-karla {
+            font-family: karla;
+        }
+    </style>
+
+    <!-- AlpineJS -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white font-family-karla">
+
+    <!-- Top Bar Nav -->
+    <nav class="w-full py-4 bg-blue-800 shadow">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+
+            <nav>
+                <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+                    <li><a class="hover:text-gray-200 hover:underline px-4" href="#">Shop</a></li>
+                    <li><a class="hover:text-gray-200 hover:underline px-4" href="#">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex items-center text-lg no-underline text-white pr-6">
+                <a class="" href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a class="pl-6" href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="pl-6" href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="pl-6" href="#">
+                    <i class="fab fa-linkedin"></i>                                                    
+                </a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Text Header -->
+    <header class="w-full container mx-auto">
+        <div class="flex flex-col items-center py-12">
+            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+                ROWFOOD BLOG
+            </a>
+            <p class="text-lg text-gray-600">
+                ROBOT SERVEUR DANS UN RESTAURANT
+            </p>
+        </div>
+    </header>
+
+    <!-- Topic Nav -->
+    <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+        <div class="block sm:hidden">
+            <a
+                href="#"
+                class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+                @click="open = !open"
+            >
+                Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+            </a>
+        </div>
+        <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Accueil</a>
+                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">fonctionnalite</a>
+                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">materiel</a>
+                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Tarif</a>
+                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Contact</a>
+                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">commentaire</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mx-auto flex flex-wrap py-6">
+
+        <!-- Post Section -->
+        <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+
+            <article class="flex flex-col shadow my-4">
+                <!-- Article Image -->
+                <a href="#" class="hover:opacity-75">
+                    <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=2">
+                </a>
+                <div class="bg-white flex flex-col justify-start p-6">
+                    <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">Technology & alimentation && bien etre</a>
+                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Quand l'objectif personnel sert le bien commun</a>
+                    <p href="#" class="text-sm pb-8">
+                        By <a href="#" class="font-semibold hover:text-gray-800">Daiki</a>, edited on April 22th, 2023
+                    </p>
+                    <h1 class="text-2xl font-bold pb-3">Introduction</h1>
+                    <p class="pb-3">Les robots ont révolutionné de nombreux domaines, et l'industrie de la restauration ne fait pas exception. Ces machines automatisées offrent des possibilités passionnantes pour améliorer l'efficacité, la précision et l'expérience globale dans les restaurants.</p>
+                    <h1 class="text-2xl font-bold pb-3">Heading</h1>
+                    <p class="pb-3">Les robots de restaurant sont conçus pour effectuer diverses tâches, allant de la préparation des aliments à leur service en salle. Leur utilisation peut contribuer à réduire les coûts de main-d'œuvre, à accélérer les opérations et à garantir des résultats cohérents.</p>
+                    <p class="pb-3">Dans les cuisines, les robots peuvent être programmés pour préparer des aliments spécifiques avec une précision et une constance remarquables. Ils peuvent découper, mélanger, cuire et assembler les ingrédients en suivant des recettes précises. Cela permet aux chefs de se concentrer sur des tâches plus créatives et complexes, tout en assurant une qualité constante des plats servis.</p>
+                    <p class="pb-3">Les robots de service en salle sont également de plus en plus populaires. Ils peuvent prendre les commandes des clients, livrer les plats et même interagir avec eux de manière conviviale. Certains de ces robots sont équipés de capteurs et de caméras qui leur permettent de naviguer en toute sécurité dans l'espace du restaurant et d'éviter les obstacles.</p>
+                    <h1 class="text-2xl font-bold pb-3">Conclusion</h1>
+                    <p class="pb-3">En fin de compte, l'utilisation de robots dans les restaurants est une évolution passionnante de l'industrie, offrant de nouvelles possibilités pour améliorer les opérations et l'expérience des clients. L'équilibre entre l'automatisation et l'interaction humaine est un défi important à relever, mais il est clair que les robots continueront à jouer un rôle croissant dans les restaurants du futur.</p>
+                </div>
+            </article>
+
+            <div class="w-full flex pt-6">
+                <a href="#" class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">
+                    <p class="text-lg text-blue-800 font-bold flex items-center"><i class="fas fa-arrow-left pr-1"></i> Previous</p>
+                    <p class="pt-2">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</p>
+                </a>
+                <a href="#" class="w-1/2 bg-white shadow hover:shadow-md text-right p-6">
+                    <p class="text-lg text-blue-800 font-bold flex items-center justify-end">Next <i class="fas fa-arrow-right pl-1"></i></p>
+                    <p class="pt-2">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</p>
+                </a>
+            </div>
+
+            <div class="w-full flex flex-col text-center md:text-left md:flex-row shadow bg-white mt-10 mb-10 p-6">
+                <div class="w-full md:w-1/5 flex justify-center md:justify-start pb-4">
+                    <img src="robot.png" class="rounded-full shadow h-32 w-32">
+                </div>
+                <div class="flex-1 flex flex-col justify-center md:justify-start">
+                    <p class="font-semibold text-2xl">CLUB ROBOTECH</p>
+                    <p class="pt-2">TRAVAIL DE BRAVES POLYTECHNICIENS</p>
+                    <div class="flex items-center justify-center md:justify-start text-2xl no-underline text-blue-800 pt-4">
+                        <a class="" href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a class="pl-4" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="pl-4" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="pl-4" href="#">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Sidebar Section -->
+        <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+
+            <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+                <p class="text-xl font-semibold pb-5">About Us</p>
+                <p class="pb-2">L'École Supérieure Polytechnique (ESP) de Dakar, également connue sous le nom de Polytechnique de Dakar, est une institution d'enseignement supérieur située à Dakar, la capitale du Sénégal. Elle fait partie de l'Université Cheikh Anta Diop (UCAD) de Dakar, la plus grande université du pays.</p>
+                <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+                    Get to know us
+                </a>
+            </div>
+            <h2></h2>
+            <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+                <p class="text-xl font-semibold pb-5">Instagram
+                    <a class="" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </p>
+
+                <div class="grid grid-cols-3 gap-3">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\robot4.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\plat2.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\robot3.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\plat4.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\robot6.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\plat6.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\robot9.jpg">                   
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\plat9.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\robot2.jpg">
+                    
+                </div>
+                <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
+                    <i class="fab fa-instagram mr-2"></i> arphanbodian@esp.sn
+                </a>
+            </div>
+            <h2>l'avenir appartient au riche</h2>
+            <div>
+                <p class="text-xl font-semibold pb-5"> facebook<a class="" href="#">
+                    <i class="fab fa-facebook"></i>
+                </a></p>
+                <div class="grid grid-cols-3 gap-3">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\plat1.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\robot1.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\plat3.jpg">                    
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\robot5.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\plat5.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\robot7.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\plat7.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\robot8.jpg">
+                    <img class="hover:opacity-75" src="C:\Users\arphan\OneDrive\Bureau\etude\Cours DSTI2\robot\plat8.jpg">
+                </div>
+                <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
+                    <i class="fab fa-instagram mr-2"></i> arphanbodian@esp.sn
+                </a>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer class="w-full border-t bg-white pb-12">
+        <div
+            class="relative w-full flex items-center invisible md:visible md:pb-12"
+            x-data="getCarouselData()"
+        >
+            <button
+                class="absolute bg-blue-600 hover:bg-blue-700 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 ml-12"
+                x-on:click="decrement()">
+                &#8592;
+            </button>
+            <template x-for="image in images.slice(currentIndex, currentIndex + 6)" :key="images.indexOf(image)">
+                <img class="w-1/6 hover:opacity-75" :src="image">
+            </template>
+            <button
+                class="absolute right-0 bg-blue-600 hover:bg-blue-700 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 mr-12"
+                x-on:click="increment()">
+                &#8594;
+            </button>
+        </div>
+        <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+            <div class="block sm:hidden">
+                <a
+                    href="#"
+                    class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+                    @click="open = !open"
+                >
+                    Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+                </a>
+            </div>
+            <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+                <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                    <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Accueil</a>
+                    <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">fonctionnalite</a>
+                    <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">materiel</a>
+                    <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Tarif</a>
+                    <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Contact</a>
+                    <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">commentaire</a>
+                </div>
+            </div>
+        </nav>
+        <div class="w-full container mx-auto flex flex-col items-center">
+            <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
+                <a href="#" class="uppercase px-3">About Us</a>
+                <a href="#" class="uppercase px-3">Privacy Policy</a>
+                <a href="#" class="uppercase px-3">Terms & Conditions</a>
+                <a href="#" class="uppercase px-3">Contact Us</a>
+            </div>
+            <div class="uppercase pb-6">&copy; ROWFOOD.com</div>
+        </div>
+    </footer>
+    
+
+    <script>
+        function getCarouselData() {
+            return {
+                currentIndex: 0,
+                images: [
+                    'img1.jpg',
+                    'img2.jpg',
+                    'img4.jpg',
+                    'img5.jpg',
+                    'img3.jpg',
+                    'img6.jpg',
+                    'img7.jpg',
+                    'img8.jpg',
+                    'img9.jpg',
+                ],
+                increment() {
+                    this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex + 1;
+                },
+                decrement() {
+                    this.currentIndex = this.currentIndex === this.images.length - 6 ? -1 : this.currentIndex - 1;
+                },
+            }
+        }
+    </script>
+
+</body>
+</html>
